@@ -21,21 +21,22 @@
     var CONFIG = {"hostname":"jiamingchu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="今天在使用elements的選擇器時，遇到不管選哪個選項，label一直都顯示最後一個選項，但value是正常的，爬文後發現el-select中需要加value-key參數，值為el-option之唯一值。">
+  <meta name="description" content="使用dompdf產出view時如果有用到img tag，在測試環境能正常顯示，但佈署到正式機時發現會顯示”Image not found or type unknown”,發現是套件的在https下有問題，但目前專案太過龐大沒辦法直接替換，找到以下解決方法：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="el-select">
-<meta property="og:url" content="http://jiamingchu.github.io/2018/06/20/el-select/index.html">
+<meta property="og:title" content="dompdf">
+<meta property="og:url" content="http://jiamingchu.github.io/post/dompdf/index.html">
 <meta property="og:site_name" content="Benjaming 🔨">
-<meta property="og:description" content="今天在使用elements的選擇器時，遇到不管選哪個選項，label一直都顯示最後一個選項，但value是正常的，爬文後發現el-select中需要加value-key參數，值為el-option之唯一值。">
+<meta property="og:description" content="使用dompdf產出view時如果有用到img tag，在測試環境能正常顯示，但佈署到正式機時發現會顯示”Image not found or type unknown”,發現是套件的在https下有問題，但目前專案太過龐大沒辦法直接替換，找到以下解決方法：">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2018-06-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-15T08:42:54.278Z">
+<meta property="article:published_time" content="2018-08-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-15T04:48:10.563Z">
 <meta property="article:author" content="Benjaming Chu">
-<meta property="article:tag" content="elementUI">
-<meta property="article:tag" content="vue">
+<meta property="article:tag" content="laravel">
+<meta property="article:tag" content="php">
+<meta property="article:tag" content="dompdf">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://jiamingchu.github.io/2018/06/20/el-select/">
+<link rel="canonical" href="http://jiamingchu.github.io/post/dompdf/">
 
 
 <script id="page-configurations">
@@ -48,7 +49,7 @@
   };
 </script>
 
-  <title>el-select | Benjaming 🔨</title>
+  <title>dompdf | Benjaming 🔨</title>
   
 
 
@@ -192,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://jiamingchu.github.io/2018/06/20/el-select/">
+    <link itemprop="mainEntityOfPage" href="http://jiamingchu.github.io/post/dompdf/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -205,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          el-select
+          dompdf
         </h1>
 
         <div class="post-meta">
@@ -215,7 +216,7 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2018-06-20 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-20T00:00:00+08:00">2018-06-20</time>
+              <time title="創建時間：2018-08-03 00:00:00" itemprop="dateCreated datePublished" datetime="2018-08-03T00:00:00+08:00">2018-08-03</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -223,7 +224,7 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/elementUI/" itemprop="url" rel="index"><span itemprop="name">elementUI</span></a>
+                  <a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a>
                 </span>
             </span>
 
@@ -238,11 +239,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>今天在使用elements的選擇器時，遇到不管選哪個選項，label一直都顯示最後一個選項，但value是正常的，爬文後發現el-select中需要加value-key參數，值為el-option之唯一值。</p>
+        <p>使用dompdf產出view時如果有用到img tag，在測試環境能正常顯示，但佈署到正式機時發現會顯示”Image not found or type unknown”,<br>發現是套件的在https下有問題，但目前專案太過龐大沒辦法直接替換，找到以下解決方法：</p>
 <a id="more"></a>
-
-<p>範例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-select filterable v-model&#x3D;&quot;setItem&quot; placeholder&#x3D;&quot;請選擇&quot; value-key&#x3D;&quot;Id&quot; no-match-text&#x3D;&quot;無相關選項&quot; no-data-text&#x3D;&quot;無資料&quot;&gt; ...your &lt;el-option&gt; &lt;&#x2F;el-select&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$pdf &#x3D; PDF::setOptions([ &#39;isRemoteEnabled&#39; &#x3D;&gt; true, &#39;isHtml5ParserEnabled&#39; &#x3D;&gt; true,);</span><br><span class="line">$pdf-&gt;getDomPDF()-&gt;setHttpContext($context);</span><br></pre></td></tr></table></figure>
+<p>多了這兩個設定就能正常顯示圖片<br>若有中文字亂碼問題，可在setOption中多設定’defaultFont’, 值為你的字型檔名稱。</p>
+<p>Ref：<a href="https://blog.skunkbad.com/php/dompdf-image-not-found-or-type-unknown" target="_blank" rel="noopener">https://blog.skunkbad.com/php/dompdf-image-not-found-or-type-unknown</a></p>
 
     </div>
 
@@ -252,8 +253,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/elementUI/" rel="tag"># elementUI</a>
-              <a href="/tags/vue/" rel="tag"># vue</a>
+              <a href="/tags/laravel/" rel="tag"># laravel</a>
+              <a href="/tags/php/" rel="tag"># php</a>
+              <a href="/tags/dompdf/" rel="tag"># dompdf</a>
           </div>
 
         
@@ -262,12 +264,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/06/13/centOSLaravelEnv/" rel="prev" title="Laravel CentOS 測試環境建置">
-      <i class="fa fa-chevron-left"></i> Laravel CentOS 測試環境建置
+    <a href="/post/el-select/" rel="prev" title="el-select">
+      <i class="fa fa-chevron-left"></i> el-select
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/08/03/dompdf/" rel="next" title="dompdf">
-      dompdf <i class="fa fa-chevron-right"></i>
+    <a href="/post/BEM/" rel="next" title="BEM">
+      BEM <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
